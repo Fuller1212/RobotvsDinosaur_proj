@@ -1,4 +1,5 @@
-
+from dinosaur import Dinosaur
+from robot import Robot
 
 class Battlefield():
     def __init__(self):
@@ -8,7 +9,7 @@ class Battlefield():
         pass
 
     def display_welcome(self):
-        pass
+        print('\nWelcome to the fight of the century! \n Only one will prevail victorious!')
 
 
     def battle_phase(self):
