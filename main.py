@@ -14,3 +14,7 @@
 
 # (10 points): As a developer, I want the battle to conclude once either the robot or the dinosaur has its health points reduced to zero.
 
+from battlefield import Battlefield
+
+battlefield_one = Battlefield()
+battlefield_one.run_game()
