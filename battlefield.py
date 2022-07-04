@@ -10,7 +10,7 @@ class Battlefield():
     def run_game(self):
         self.display_welcome()
         self.battle_phase() 
-        self.display_winner   
+        self.display_winner()   
         
 
     def display_welcome(self):
@@ -19,24 +19,19 @@ class Battlefield():
 
     def battle_phase(self):
         while self.robot.health > 0 and self.dinosaur.health > 0:
-            if self.robot.health > 0:
                 self.dinosaur.attack(self.robot)
-                robot_remaining_health = self.robot.health - self.dinosaur.attack_power  
-                if robot_remaining_health <=0:
-                    break
-
-            
-            if self.dinosaur.health > 0:
                 self.robot.attack(self.dinosaur)
-                dinosaur_remaining_health = self.dinosaur.health - self.robot.active_weapon.attack_power
-                if dinosaur_remaining_health <= 0:
+                if self.robot.health <= 0 or self.dinosaur.health <= 0:
                     break
+                
         
 
 
     def display_winner(self):
         if self.robot.health <= 0:
             print(f'{self.dinosaur.name} has defeated the mighty {self.robot.name}!')
+            print(f'{self.dinosaur.name} wins!')
         elif self.dinosaur.health <= 0:
             print(f'{self.robot.name} has defeated the mighty {self.dinosaur.name}')
+            print(f'{self.robot.name} wins!')
         

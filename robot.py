@@ -13,6 +13,8 @@ class Robot():
         
 
     def attack(self, dinosaur):  
+        print(f'Robo {self.name} attacked {dinosaur.name} with a {self.active_weapon.name} for {self.active_weapon.attack_power} damage')
         dinosaur.health = dinosaur.health  - self.active_weapon.attack_power
-        print(f'Robo {self.name} attacked {dinosaur.name} with a {self.active_weapon.name} for {self.active_weapon.attack_power} damage \n {dinosaur.name} now has {dinosaur.health} health remaining! \n')
+        print(f'{dinosaur.name} now has {dinosaur.health} health remaining!\n')
+        
         
