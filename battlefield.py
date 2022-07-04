@@ -18,6 +18,7 @@ class Battlefield():
 
 
     def battle_phase(self):
+        self.robot.choose_weapon()
         while self.robot.health > 0 and self.dinosaur.health > 0:
                 self.dinosaur.attack(self.robot)
                 self.robot.attack(self.dinosaur)
